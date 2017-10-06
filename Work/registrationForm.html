@@ -8,38 +8,42 @@
 <h1>Register</h1>
 
 <form>
-
 	<label for ="first">First Name:</label>
 	<input name="first" id="first" type="text" placeholder="John" required>
-
-	<label for ="last">Last Name Name:</label>
+	<label for ="last">Last Name:</label>
 	<input name="last" id="last" type="text" placeholder ="Smith" required>
 
+<div>
 	<label for="Male">Male:</label>
-    <input name="genderChoice" id="male" type="radio" 
-    value="Male">
-
+    <input name="gender" id="male" type="radio" value="Male">
     <label for="Female">Female:</label>
-    <input name="genderChoice" id="female" type="radio" 
-    value="Female">
-
+    <input name="gender" id="female" type="radio" value="Female">
     <label for="Other">Other:</label>
-    <input name="genderChoice" id="Other" type="radio" 
-    value="Other">
+    <input name="gender" id="Other" type="radio" value="Other">
+</div>
 
-	<label for ="Email">Email:</label>
-	<input id="email" type="email" placeholder ="email" required>
+<div>
+  <label>
+  	Email:
+  	<input name"email" type="email" placeholder="your email">
+  </label>
 
-	<label for ="password">Password:</label>
-	<input id="password" type="password" placeholder ="password" required>
+  <label>
+  	Password:
+  	<input name"password" type="password" pattern=".{5,10}" required title="5 to 10 characters">
+  </label>
+</div>
 
- Birthday:
+<div>
+
+<label>
+Birthday:
  <select name="Month">
  	 <option value="Month">Month</option>
      <option value="October">October</option>
      <option value="November">November</option>
      <option value="December">December</option>
-   </select>
+ </select>
 
  <select name="Day">
      <option value="Day">Day</option>
@@ -53,15 +57,26 @@
      <option value="1984">1984</option>
      <option value="1985">1985</option>
      <option value="1986">1986</option>
-   </select>   
+ </select>
+ </label>
+</div>
 
- <label for="Terms">I agree to the terms and conditons</label>
- <input id="Terms" type="checkbox" 
- value="Terms">
-
+<div>
+	 <label for="terms">I agree to the terms and conditons</label>
+	 <input id="terms" name="terms" type="checkbox">
+</div>
 <input type="submit">
 
 </form>
 
 </body>
 </html>
+
+<!-- NOTES!!! -->
+
+<!-- Using the <DIV> Tag to break up the form instead of <BR> is better practice -->
+<!-- First and last name should have different ID's and Names. In mine I used username -->
+<!-- Shortend genderChoice to gender to make it cleaner -->
+<!-- For the Birthday section for the <label> Tag -->
+<!-- For terms and conditions did not need the value -->
+<!-- Answer I used for validating password length while it worked, was not the one used in this example. Switched to the better one used by the instructor -->
